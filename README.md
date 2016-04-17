@@ -4,7 +4,7 @@ Router component to be used in your React Native redux applications.  Packed wit
 
 ![demo](http://f.cl.ly/items/1e0x2X1Z2G1B2E3l1F1Q/Screen%20Recording%202015-11-23%20at%2008.11%20AM.gif)
 
-## getting started
+## Getting started
 
 The easiest way to get started is to check out the example:
 
@@ -91,6 +91,59 @@ class Application extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Application);
+```
+
+Change route in response to an async action, e. g. a successful login/logout. 
+
+```
+# app/actions/loginAction.js 
+
+import {
+  actions as routerActions,
+} from 'react-native-router-redux';
+
+export function signIn() {
+  return dispatch => {
+    dispatch({
+      type: routerActions.actionTypes.ROUTER_PUSH,
+      payload: {
+        name: 'detail',
+      },
+    });
+  }
+}
+
+
+export function logout() {
+  return dispatch => {
+    dispatch({
+      type: routerActions.actionTypes.ROUTER_PUSH,
+      payload: {
+        name: 'signIn',
+      },
+    });
+  }
+}
+
+```
+
+If you need to access the state
+
+```
+# app/actions/loginAction.js 
+
+export function signIn() {
+  return (dispatch, getState) => {
+    const state =  getState()
+    dispatch({
+      type: routerActions.actionTypes.ROUTER_PUSH,
+      payload: {
+        name: 'detail',
+      },
+    });
+  }
+}
+
 ```
 
 ## inspiration

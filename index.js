@@ -1,4 +1,5 @@
-import React, { Navigator, StyleSheet, View } from 'react-native';
+import React from 'react';
+import { Navigator, StyleSheet, View } from 'react-native';
 import Animations from './src/Animations';
 import { NavBar } from './src/NavBar';
 import TabBar from './src/TabBar';

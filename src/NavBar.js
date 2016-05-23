@@ -2,7 +2,7 @@ import NavigationBar from 'react-native-navbar';
 import React, { Component, StyleSheet } from 'react';
 
 const leftButton = (props = {}, transitioning) => {
-  if (props.navLeft && props.navLeft._isReactElement) {
+  if (props.navLeft && React.isValidElement( props.navLeft ) ) {
     return props.navLeft;
   }
 
@@ -23,7 +23,7 @@ const leftButton = (props = {}, transitioning) => {
 };
 
 const rightButton = (props = {}) => {
-  if (props.navRight && props.navRight._isReactElement) {
+  if (props.navRight && React.isValidElement( props.navRight ) ) {
     return props.navRight;
   }
 
@@ -41,7 +41,7 @@ const statusBar = props => ({
 });
 
 const title = props => {
-  if (props.navTitle && props.navTitle._isReactElement) {
+  if (props.navTitle && React.isValidElement( props.navTitle ) ) {
     return props.navTitle;
   }
 

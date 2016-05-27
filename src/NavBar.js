@@ -84,6 +84,7 @@ class NavBarBase extends Component {
         statusBar={statusBar(this.props)}
         tintColor={this.props.navTint || 'white'}
         title={title(this.props)}
+        style={this.props.style}
         />
     );
   }

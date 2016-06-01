@@ -14,7 +14,7 @@
   "author": "Team Qwikly",
   "license": "MIT",
   "dependencies": {
-    "react-native-navbar": "github:teampumpkin/react-native-navbar#ccfbc004811c14f58996b0131b21f393713a3ede",
+    "react-native-navbar": "github:teampumpkin/react-native-navbar#b9071ec2ffe2007477f766e584b21a3370a04567",
     "react-native-tabs": "aksonov/react-native-tabs"
   }
 }
